@@ -1,20 +1,22 @@
 import { Suspense } from "react";
 import MovieInfo, { getMovies } from "../../../../components/movie-info";
 import MovieVideos from "../../../../components/movie-videos";
+import { Metadata } from "next";
 
-export async function generateMetadata({params}: Props) {
-    const movie = await getMovies(params.id);
+type IParams = Promise <{id: string;}>;
+
+export async function generateMetadata(props: { params: IParams }) {
+    const params = await props.params;
+    const id = params.id;
+    const movie = await getMovies(id);
     return {
         title: movie.title
     }
 }
 
-type Props = {
-    params: {id: string};
-}
-
-export default async function MovieDetail({params}: Props) {
-    const { id } = params;
+export default async function MovieDetail(props: { params: IParams }) {
+    const params = await props.params;
+    const id = params.id;
 
     return (
         <div>             
