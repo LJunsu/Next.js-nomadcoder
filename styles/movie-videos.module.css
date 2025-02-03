@@ -9,6 +9,7 @@
   }
   
   .container iframe {
+    width: 100%;
     border-radius: 10px;
     opacity: 0.8;
     transition: opacity 0.2s ease-in-out;

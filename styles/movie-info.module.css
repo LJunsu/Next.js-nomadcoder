@@ -24,3 +24,8 @@
     margin-top: 20px;
     gap: 20px;
   }
+
+  .side {
+    display: flex;
+    gap: 30px;
+  }

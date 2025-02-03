@@ -1,0 +1,35 @@
+.credit_container {
+    display: flex;
+    width: calc(50% - 2% - 2% - 2%);
+    padding: 2%;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.credit_container > img {
+    border-radius: 20px;
+    max-width: 30%;
+    place-self: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.credit_container:hover img {
+    opacity: 1;
+}
+
+.credit_container > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+
+.credit_container > div > h3 {
+    font-size: 32px;
+}
+
+.credit_container > div > h4 {
+    font-size: 20px;
+}
